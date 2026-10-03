@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CreaTuWeb | Crea tu página web fácil y rápido</title>
+
+<meta name="description" content="Crea tu propia página web profesional sin programar. Elige una plantilla, personalízala y publica tu sitio fácilmente.">
+<meta name="keywords" content="crear página web, creador de páginas web, páginas web, crear sitio web, tienda online, página para negocio">
+<meta name="author" content="CreaTuWeb">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#050b10;
+    --bg2:#07151b;
+    --card:#0d1a21;
+    --green:#32ff91;
+    --green2:#0fdc72;
+    --cyan:#42e8ff;
+    --purple:#8b5cf6;
+    --white:#ffffff;
+    --text:#d7e2e7;
+    --muted:#8da0aa;
+    --border:rgba(255,255,255,.09);
+    --shadow:0 20px 70px rgba(0,0,0,.35);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:white;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(5,11,16,.78);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.nav{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:23px;
+    font-weight:900;
+}
+
+.logo-icon{
+    width:38px;
+    height:38px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,var(--green),var(--cyan));
+    color:#04100b;
+    font-size:20px;
+    box-shadow:0 0 30px rgba(50,255,145,.25);
+}
+
+.logo span{
+    color:var(--green);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    color:#c8d3d8;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-links a{
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.nav-buttons{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    border-radius:12px;
+    padding:13px 20px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid rgba(255,255,255,.35);
+    color:white;
+}
+
+.btn-outline:hover{
+    border-color:var(--green);
+    color:var(--green);
+}
+
+.btn-green{
+    background:var(--green);
+    color:#03100a;
+    box-shadow:0 8px 30px rgba(50,255,145,.18);
+}
+
+.btn-green:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 40px rgba(50,255,145,.3);
+}
+
+.menu{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:760px;
+    padding-top:150px;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 18% 50%,rgba(0,255,145,.19),transparent 30%),
+        radial-gradient(circle at 80% 25%,rgba(111,55,255,.22),transparent 30%),
+        radial-gradient(circle at 90% 75%,rgba(0,220,255,.14),transparent 25%);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(50,255,145,.07);
+    filter:blur(100px);
+    top:200px;
+    left:-200px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:50px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 13px;
+    border:1px solid rgba(50,255,145,.3);
+    background:rgba(50,255,145,.06);
+    color:var(--green);
+    border-radius:50px;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(44px,5.5vw,74px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    font-weight:900;
+}
+
+.hero h1 span{
+    color:var(--green);
+}
+
+.hero p{
+    margin-top:24px;
+    max-width:570px;
+    color:#aebfc7;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.hero-actions{
+    display:flex;
+    gap:13px;
+    margin-top:32px;
+    flex-wrap:wrap;
+}
+
+.hero-actions .btn{
+    padding:16px 24px;
+}
+
+.hero-features{
+    display:flex;
+    gap:22px;
+    margin-top:28px;
+    flex-wrap:wrap;
+}
+
+.hero-feature{
+    color:#a7b8bf;
+    font-size:13px;
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.hero-feature strong{
+    color:var(--green);
+}
+
+/* MOCKUP */
+
+.mockup-area{
+    position:relative;
+    min-height:480px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.glow{
+    position:absolute;
+    width:360px;
+    height:360px;
+    background:linear-gradient(135deg,var(--green),var(--purple));
+    filter:blur(80px);
+    opacity:.28;
+}
+
+.laptop{
+    position:relative;
+    width:min(540px,100%);
+    border-radius:17px;
+    padding:10px;
+    background:#101a1f;
+    border:1px solid rgba(255,255,255,.2);
+    box-shadow:0 40px 100px rgba(0,0,0,.6);
+    transform:perspective(1200px) rotateY(-4deg) rotateX(2deg);
+}
+
+.screen{
+    border-radius:10px;
+    overflow:hidden;
+    background:#071016;
+    height:320px;
+    position:relative;
+}
+
+.screen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.laptop-base{
+    width:112%;
+    margin-left:-6%;
+    height:18px;
+    border-radius:0 0 30px 30px;
+    background:linear-gradient(#aeb7bb,#555d61);
+}
+
+.phone{
+    position:absolute;
+    right:-20px;
+    bottom:10px;
+    width:155px;
+    height:300px;
+    background:#070d10;
+    border:7px solid #202a2f;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,.65);
+}
+
+.phone img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.floating{
+    position:absolute;
+    padding:12px 16px;
+    background:rgba(7,17,22,.9);
+    border:1px solid rgba(50,255,145,.25);
+    border-radius:14px;
+    font-size:12px;
+    font-weight:700;
+    box-shadow:var(--shadow);
+}
+
+.float1{
+    top:60px;
+    right:-5px;
+    color:var(--green);
+}
+
+.float2{
+    bottom:70px;
+    left:-20px;
+}
+
+.float2 span{
+    color:var(--green);
+}
+
+/* SECTIONS */
+
+section{
+    padding:100px 0;
+}
+
+.section-head{
+    max-width:700px;
+    margin-bottom:45px;
+}
+
+.section-head.center{
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.section-head h2{
+    font-size:clamp(32px,4vw,48px);
+    letter-spacing:-1.5px;
+}
+
+.section-head h2 span{
+    color:var(--green);
+}
+
+.section-head p{
+    margin-top:14px;
+    color:var(--muted);
+    line-height:1.7;
+}
+
+/* TEMPLATES */
+
+.templates{
+    background:#f4f8f9;
+    color:#081116;
+}
+
+.template-filters{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.filter{
+    border:1px solid #dce5e8;
+    background:white;
+    padding:11px 17px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:700;
+    color:#52636a;
+}
+
+.filter.active,
+.filter:hover{
+    background:#071116;
+    color:var(--green);
+    border-color:#071116;
+}
+
+.templates-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.template{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 15px 45px rgba(8,17,22,.09);
+    transition:.3s;
+}
+
+.template:hover{
+    transform:translateY(-8px);
+}
+
+.template-image{
+    height:210px;
+    overflow:hidden;
+    position:relative;
+}
+
+.template-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.template:hover img{
+    transform:scale(1.05);
+}
+
+.template-tag{
+    position:absolute;
+    top:12px;
+    left:12px;
+    background:#071116;
+    color:var(--green);
+    padding:7px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+}
+
+.template-info{
+    padding:20px;
+}
+
+.template-info h3{
+    margin-bottom:7px;
+}
+
+.template-info p{
+    color:#75848a;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.template-info button{
+    width:100%;
+    margin-top:17px;
+}
+
+/* HOW */
+
+.how{
+    background:
+        radial-gradient(circle at 80% 30%,rgba(120,70,255,.12),transparent 30%),
+        var(--bg2);
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    padding:28px 22px;
+    border:1px solid var(--border);
+    border-radius:20px;
+    background:rgba(255,255,255,.025);
+    position:relative;
+}
+
+.step-number{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:var(--green);
+    color:#03100a;
+    font-weight:900;
+    margin-bottom:22px;
+}
+
+.step h3{
+    margin-bottom:10px;
+}
+
+.step p{
+    color:var(--muted);
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* FEATURES */
+
+.features{
+    background:#f5f9fa;
+    color:#081116;
+}
+
+.feature-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.feature-image{
+    border-radius:25px;
+    overflow:hidden;
+    height:470px;
+    box-shadow:0 25px 70px rgba(0,0,0,.18);
+}
+
+.feature-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.feature-list{
+    display:grid;
+    gap:18px;
+    margin-top:30px;
+}
+
+.feature-item{
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+}
+
+.feature-icon{
+    min-width:46px;
+    height:46px;
+    border-radius:13px;
+    background:#dfffee;
+    color:#08a955;
+    display:grid;
+    place-items:center;
+    font-size:20px;
+}
+
+.feature-item h3{
+    margin-bottom:5px;
+}
+
+.feature-item p{
+    color:#73838a;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* SHOWCASE */
+
+.showcase{
+    background:var(--bg);
+}
+
+.showcase-box{
+    border-radius:30px;
+    padding:55px;
+    background:
+        linear-gradient(120deg,rgba(50,255,145,.12),rgba(111,65,255,.13)),
+        #0a171d;
+    border:1px solid var(--border);
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:40px;
+    overflow:hidden;
+}
+
+.showcase-box h2{
+    font-size:42px;
+    line-height:1.1;
+}
+
+.showcase-box h2 span{
+    color:var(--green);
+}
+
+.showcase-box p{
+    color:var(--muted);
+    margin:17px 0 25px;
+    line-height:1.7;
+}
+
+.showcase-img{
+    border-radius:20px;
+    overflow:hidden;
+    height:320px;
+}
+
+.showcase-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+    background:#f5f9fa;
+    color:#081116;
+}
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.review{
+    background:white;
+    border:1px solid #e4ebed;
+    border-radius:20px;
+    padding:25px;
+}
+
+.stars{
+    color:#ffc400;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.review p{
+    color:#5d6d73;
+    line-height:1.65;
+    font-size:14px;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:20px;
+}
+
+.user img{
+    width:45px;
+    height:45px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+.user small{
+    color:#829097;
+}
+
+/* PRICING */
+
+.pricing{
+    background:
+        radial-gradient(circle at 20% 50%,rgba(50,255,145,.08),transparent 25%),
+        var(--bg2);
+}
+
+.price-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.price{
+    border:1px solid var(--border);
+    background:#0b171d;
+    border-radius:22px;
+    padding:30px;
+}
+
+.price.featured{
+    border:2px solid var(--green);
+    transform:translateY(-8px);
+    box-shadow:0 20px 70px rgba(50,255,145,.1);
+}
+
+.price h3{
+    font-size:20px;
+}
+
+.price-desc{
+    color:var(--muted);
+    font-size:13px;
+    margin:10px 0 20px;
+}
+
+.price-number{
+    font-size:42px;
+    font-weight:900;
+}
+
+.price-number small{
+    font-size:14px;
+    color:var(--muted);
+}
+
+.price ul{
+    list-style:none;
+    margin:25px 0;
+    display:grid;
+    gap:13px;
+}
+
+.price li{
+    color:#bdcbd0;
+    font-size:14px;
+}
+
+.price li::before{
+    content:"✓";
+    color:var(--green);
+    font-weight:bold;
+    margin-right:8px;
+}
+
+/* FAQ */
+
+.faq{
+    background:#f5f9fa;
+    color:#081116;
+}
+
+.faq-list{
+    max-width:850px;
+    margin:auto;
+    display:grid;
+    gap:12px;
+}
+
+.faq-item{
+    background:white;
+    border:1px solid #e2e9eb;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.faq-question{
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    cursor:pointer;
+    font-weight:800;
+}
+
+.faq-answer{
+    display:none;
+    padding:0 20px 20px;
+    color:#65757b;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.faq-item.open .faq-answer{
+    display:block;
+}
+
+.faq-item.open .faq-question{
+    color:#0ba955;
+}
+
+/* CTA */
+
+.cta{
+    padding:90px 0;
+    background:
+        radial-gradient(circle at 50% 0%,rgba(50,255,145,.2),transparent 45%),
+        var(--bg);
+}
+
+.cta-box{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+}
+
+.cta-box h2{
+    font-size:clamp(36px,5vw,58px);
+    letter-spacing:-2px;
+}
+
+.cta-box h2 span{
+    color:var(--green);
+}
+
+.cta-box p{
+    color:var(--muted);
+    margin:17px auto 28px;
+    max-width:600px;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+    background:#03080b;
+    border-top:1px solid var(--border);
+    padding:60px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-brand p{
+    color:#718189;
+    font-size:13px;
+    line-height:1.6;
+    max-width:330px;
+    margin-top:15px;
+}
+
+.footer-col h4{
+    margin-bottom:17px;
+}
+
+.footer-col a{
+    display:block;
+    color:#75858c;
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.footer-col a:hover{
+    color:var(--green);
+}
+
+.footer-bottom{
+    border-top:1px solid var(--border);
+    margin-top:40px;
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    color:#5f6e74;
+    font-size:12px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:3000;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    background:#0b171d;
+    border:1px solid rgba(255,255,255,.12);
+    width:min(500px,100%);
+    border-radius:24px;
+    padding:30px;
+    position:relative;
+    box-shadow:0 30px 100px rgba(0,0,0,.6);
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    cursor:pointer;
+    font-size:25px;
+    color:#899aa1;
+}
+
+.modal-box h2{
+    margin-bottom:8px;
+}
+
+.modal-box p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:7px;
+    color:#c8d4d9;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:14px;
+    border-radius:11px;
+    border:1px solid rgba(255,255,255,.1);
+    background:#071116;
+    color:white;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:var(--green);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    .nav-links,
+    .nav-buttons{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-grid,
+    .feature-layout,
+    .showcase-box{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .mockup-area{
+        min-height:420px;
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .templates-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .reviews,
+    .price-grid{
+        grid-template-columns:1fr;
+    }
+
+    .price.featured{
+        transform:none;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .hero h1{
+        font-size:44px;
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .laptop{
+        width:95%;
+    }
+
+    .screen{
+        height:220px;
+    }
+
+    .phone{
+        width:110px;
+        height:220px;
+        right:-5px;
+    }
+
+    .float1{
+        right:0;
+    }
+
+    .float2{
+        left:0;
+    }
+
+    .steps,
+    .templates-grid{
+        grid-template-columns:1fr;
+    }
+
+    .showcase-box{
+        padding:30px 22px;
+    }
+
+    .showcase-box h2{
+        font-size:34px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+    <a href="#" class="logo">
+        <div class="logo-icon">🌐</div>
+        CreaTu<span>Web</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#plantillas">Plantillas</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#precios">Precios</a>
+        <a href="#faq">Preguntas</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <button class="btn btn-outline" onclick="openModal('login')">
+            Iniciar sesión
+        </button>
+
+        <button class="btn btn-green" onclick="openModal('create')">
+            Crear mi web
+        </button>
+    </div>
+
+    <div class="menu" onclick="toggleMenu()">☰</div>
+
+</div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="inicio">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+    ✦ Crea tu presencia online
+</div>
+
+<h1>
+    Crea tu propia página web
+    <span>fácil y rápido.</span>
+</h1>
+
+<p>
+    Convierte tu idea en una página web profesional sin saber programación.
+    Elige una plantilla, personalízala y prepara tu sitio para comenzar a crecer.
+</p>
+
+<div class="hero-actions">
+
+<button class="btn btn-green" onclick="openModal('create')">
+    Crear mi web ahora →
+</button>
+
+<a href="#como" class="btn btn-outline">
+    ▶ Ver cómo funciona
+</a>
+
+</div>
+
+<div class="hero-features">
+
+<div class="hero-feature">
+    <strong>✓</strong> Sin conocimientos técnicos
+</div>
+
+<div class="hero-feature">
+    <strong>✓</strong> Diseño adaptable
+</div>
+
+<div class="hero-feature">
+    <strong>✓</strong> Fácil de usar
+</div>
+
+</div>
+
+</div>
+
+
+<div class="mockup-area">
+
+<div class="glow"></div>
+
+<div class="laptop">
+
+<div class="screen">
+
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Personas trabajando en un proyecto web">
+
+</div>
+
+<div class="laptop-base"></div>
+
+</div>
+
+<div class="phone">
+
+<img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=500&q=85" alt="Negocio utilizando tecnología móvil">
+
+</div>
+
+<div class="floating float1">
+    🚀 Tu web en minutos
+</div>
+
+<div class="floating float2">
+    ⭐ <span>Diseño profesional</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PLANTILLAS -->
+
+<section class="templates" id="plantillas">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2>
+    Elige una <span>plantilla</span> y hazla tuya
+</h2>
+
+<p>
+    Empieza con una estructura profesional y personalízala con tus imágenes,
+    textos, colores, servicios y datos de contacto.
+</p>
+
+</div>
+
+
+<div class="template-filters">
+
+<button class="filter active" onclick="filterTemplates('all',this)">Todas</button>
+<button class="filter" onclick="filterTemplates('negocio',this)">Negocios</button>
+<button class="filter" onclick="filterTemplates('comida',this)">Restaurantes</button>
+<button class="filter" onclick="filterTemplates('fitness',this)">Fitness</button>
+<button class="filter" onclick="filterTemplates('belleza',this)">Belleza</button>
+<button class="filter" onclick="filterTemplates('tienda',this)">Tiendas</button>
+
+</div>
+
+
+<div class="templates-grid">
+
+<div class="template" data-category="fitness">
+
+<div class="template-image">
+<img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85" alt="Plantilla para gimnasio">
+<div class="template-tag">FITNESS</div>
+</div>
+
+<div class="template-info">
+<h3>Gym & Fitness</h3>
+<p>Una página moderna para gimnasios, entrenadores y coaches.</p>
+<button class="btn btn-green" onclick="selectTemplate('Gym & Fitness')">Usar plantilla</button>
+</div>
+
+</div>
+
+
+<div class="template" data-category="comida">
+
+<div class="template-image">
+<img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85" alt="Plantilla para restaurante">
+<div class="template-tag">RESTAURANTE</div>
+</div>
+
+<div class="template-info">
+<h3>Restaurante</h3>
+<p>Muestra tu menú, ubicación, horarios y formas de contacto.</p>
+<button class="btn btn-green" onclick="selectTemplate('Restaurante')">Usar plantilla</button>
+</div>
+
+</div>
+
+
+<div class="template" data-category="belleza">
+
+<div class="template-image">
+<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85" alt="Plantilla para salón de belleza">
+<div class="template-tag">BELLEZA</div>
+</div>
+
+<div class="template-info">
+<h3>Beauty Studio</h3>
+<p>Perfecta para salones, barberías, uñas y profesionales de belleza.</p>
+<button class="btn btn-green" onclick="selectTemplate('Beauty Studio')">Usar plantilla</button>
+</div>
+
+</div>
+
+
+<div class="template" data-category="tienda">
+
+<div class="template-image">
+<img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=85" alt="Plantilla para tienda">
+<div class="template-tag">TIENDA</div>
+</div>
+
+<div class="template-info">
+<h3>Tienda Online</h3>
+<p>Presenta tus productos con una imagen moderna y profesional.</p>
+<button class="btn btn-green" onclick="selectTemplate('Tienda Online')">Usar plantilla</button>
+</div>
+
+</div>
+
+
+<div class="template" data-category="negocio">
+
+<div class="template-image">
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85" alt="Plantilla para negocio">
+<div class="template-tag">NEGOCIO</div>
+</div>
+
+<div class="template-info">
+<h3>Empresa Pro</h3>
+<p>Una presencia profesional para empresas y pequeños negocios.</p>
+<button class="btn btn-green" onclick="selectTemplate('Empresa Pro')">Usar plantilla</button>
+</div>
+
+</div>
+
+
+<div class="template" data-category="negocio">
+
+<div class="template-image">
+<img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=85" alt="Plantilla para emprendedores">
+<div class="template-tag">SERVICIOS</div>
+</div>
+
+<div class="template-info">
+<h3>Profesional</h3>
+<p>Ideal para freelancers, consultores y trabajadores independientes.</p>
+<button class="btn btn-green" onclick="selectTemplate('Profesional')">Usar plantilla</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COMO FUNCIONA -->
+
+<section class="how" id="como">
+
+<div class="container">
+
+<div class="section-head center">
+
+<h2>
+    ¿Cómo <span>funciona?</span>
+</h2>
+
+<p>
+    Crear tu sitio puede ser mucho más sencillo de lo que imaginas.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+
+<div class="step-number">1</div>
+
+<h3>Elige una plantilla</h3>
+
+<p>
+Explora diseños preparados para diferentes negocios,
+profesiones y proyectos.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>Personaliza</h3>
+
+<p>
+Cambia textos, imágenes, colores, botones y la información de tu negocio.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>Publica</h3>
+
+<p>
+Prepara tu página para compartirla con clientes desde cualquier dispositivo.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h3>Comparte</h3>
+
+<p>
+Comparte tu página en WhatsApp, Facebook, Instagram o donde quieras.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BENEFICIOS -->
+
+<section class="features">
+
+<div class="container feature-layout">
+
+<div class="feature-image">
+
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85" alt="Emprendedor trabajando en una computadora">
+
+</div>
+
+
+<div>
+
+<div class="section-head">
+
+<h2>
+    Tu web, <span>en tus manos.</span>
+</h2>
+
+<p>
+    Crea una presencia digital que represente tu negocio y ayude a tus clientes
+    a encontrarte.
+</p>
+
+</div>
+
+
+<div class="feature-list">
+
+<div class="feature-item">
+
+<div class="feature-icon">⚡</div>
+
+<div>
+<h3>Rápido y sencillo</h3>
+<p>No necesitas ser programador para comenzar.</p>
+</div>
+
+</div>
+
+
+<div class="feature-item">
+
+<div class="feature-icon">📱</div>
+
+<div>
+<h3>Adaptable a móviles</h3>
+<p>Tu página se verá bien en celulares, tablets y computadoras.</p>
+</div>
+
+</div>
+
+
+<div class="feature-item">
+
+<div class="feature-icon">🎨</div>
+
+<div>
+<h3>Diseño personalizable</h3>
+<p>Haz que tu sitio tenga el estilo de tu marca.</p>
+</div>
+
+</div>
+
+
+<div class="feature-item">
+
+<div class="feature-icon">🚀</div>
+
+<div>
+<h3>Listo para crecer</h3>
+<p>Empieza pequeño y agrega nuevas funciones después.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SHOWCASE -->
+
+<section class="showcase">
+
+<div class="container">
+
+<div class="showcase-box">
+
+<div>
+
+<h2>
+    Tu idea merece
+    <span>una gran web.</span>
+</h2>
+
+<p>
+    No necesitas ser experto en tecnología.
+    Solo necesitas una idea y las ganas de hacerla crecer.
+</p>
+
+<button class="btn btn-green" onclick="openModal('create')">
+    Crear mi web →
+</button>
+
+</div>
+
+<div class="showcase-img">
+
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1000&q=85" alt="Emprendedor utilizando una laptop">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TESTIMONIOS -->
+
+<section class="testimonials">
+
+<div class="container">
+
+<div class="section-head center">
+
+<h2>
+    Lo que dicen nuestros <span>usuarios</span>
+</h2>
+
+<p>
+    Una página profesional puede ayudarte a presentar mejor tu proyecto.
+</p>
+
+</div>
+
+
+<div class="reviews">
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“Me gustó muchísimo la facilidad para comenzar.
+Pude presentar mi negocio de una forma mucho más profesional.”
+</p>
+
+<div class="user">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos">
+
+<div>
+<strong>Carlos M.</strong><br>
+<small>Emprendedor</small>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“Encontré una plantilla que se adaptaba perfectamente
+a mi negocio y pude personalizarla.”
+</p>
+
+<div class="user">
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana">
+
+<div>
+<strong>Ana L.</strong><br>
+<small>Negocio local</small>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">★★★★★</div>
+
+<p>
+“Ahora tengo un lugar donde mis clientes pueden conocer
+mis servicios y contactarme.”
+</p>
+
+<div class="user">
+
+<img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Luis">
+
+<div>
+<strong>Luis R.</strong><br>
+<small>Profesional independiente</small>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRECIOS -->
+
+<section class="pricing" id="precios">
+
+<div class="container">
+
+<div class="section-head center">
+
+<h2>
+    Planes <span>simples</span>
+</h2>
+
+<p>
+    Empieza con lo que necesitas y escala cuando tu proyecto crezca.
+</p>
+
+</div>
+
+
+<div class="price-grid">
+
+<div class="price">
+
+<h3>Gratis</h3>
+
+<p class="price-desc">
+Para comenzar a experimentar.
+</p>
+
+<div class="price-number">
+$0 <small>/mes</small>
+</div>
+
+<ul>
+<li>Crear una página</li>
+<li>Plantillas básicas</li>
+<li>Diseño adaptable</li>
+<li>Personalización básica</li>
+</ul>
+
+<button class="btn btn-outline" onclick="openModal('create')">
+Comenzar gratis
+</button>
+
+</div>
+
+
+<div class="price featured">
+
+<h3>Pro</h3>
+
+<p class="price-desc">
+Para emprendedores y negocios.
+</p>
+
+<div class="price-number">
+$99 <small>/mes</small>
+</div>
+
+<ul>
+<li>Más opciones de diseño</li>
+<li>Personalización avanzada</li>
+<li>Secciones adicionales</li>
+<li>Soporte prioritario</li>
+</ul>
+
+<button class="btn btn-green" onclick="openModal('create')">
+Elegir Pro
+</button>
+
+</div>
+
+
+<div class="price">
+
+<h3>Negocio</h3>
+
+<p class="price-desc">
+Para proyectos que quieren crecer.
+</p>
+
+<div class="price-number">
+$199 <small>/mes</small>
+</div>
+
+<ul>
+<li>Funciones avanzadas</li>
+<li>Diseños premium</li>
+<li>Herramientas comerciales</li>
+<li>Soporte prioritario</li>
+</ul>
+
+<button class="btn btn-outline" onclick="openModal('create')">
+Ver opciones
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-head center">
+
+<h2>
+    Preguntas <span>frecuentes</span>
+</h2>
+
+<p>
+    Algunas respuestas antes de comenzar.
+</p>
+
+</div>
+
+
+<div class="faq-list">
+
+<div class="faq-item">
+
+<div class="faq-question" onclick="toggleFaq(this)">
+    ¿Necesito saber programación?
+    <span>+</span>
+</div>
+
+<div class="faq-answer">
+    No. La idea de CreaTuWeb es facilitar la creación de sitios para personas
+    que no tienen conocimientos técnicos.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question" onclick="toggleFaq(this)">
+    ¿Puedo usar mi celular?
+    <span>+</span>
+</div>
+
+<div class="faq-answer">
+    Sí. La interfaz está pensada para funcionar también desde dispositivos móviles.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question" onclick="toggleFaq(this)">
+    ¿Puedo cambiar las imágenes?
+    <span>+</span>
+</div>
+
+<div class="faq-answer">
+    Sí. Una versión completa del editor permitirá personalizar imágenes,
+    textos, colores, botones y diferentes secciones.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question" onclick="toggleFaq(this)">
+    ¿Puedo conectar un dominio?
+    <span>+</span>
+</div>
+
+<div class="faq-answer">
+    La plataforma puede prepararse posteriormente para conectar dominios
+    personalizados.
+</div>
+
+</div>
+
+
+<div class="faq-item">
+
+<div class="faq-question" onclick="toggleFaq(this)">
+    ¿Puedo crear una tienda?
+    <span>+</span>
+</div>
+
+<div class="faq-answer">
+    Sí. Podemos incorporar posteriormente herramientas específicas para
+    productos, catálogos y tiendas online.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>
+    Tu próximo proyecto
+    <span>empieza aquí.</span>
+</h2>
+
+<p>
+    Elige una plantilla, personalízala y empieza a construir
+    tu presencia en internet.
+</p>
+
+<button class="btn btn-green" onclick="openModal('create')">
+    Crear mi página web →
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer-brand">
+
+<a href="#" class="logo">
+<div class="logo-icon">🌐</div>
+CreaTu<span>Web</span>
+</a>
+
+<p>
+Tu sitio, en minutos. Una plataforma pensada para ayudarte
+a llevar tus ideas y negocios a internet.
+</p>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>Producto</h4>
+
+<a href="#plantillas">Plantillas</a>
+<a href="#como">Cómo funciona</a>
+<a href="#precios">Precios</a>
+<a href="#faq">Preguntas</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>Recursos</h4>
+
+<a href="#">Guía para comenzar</a>
+<a href="#">Ideas para negocios</a>
+<a href="#">Blog</a>
+<a href="#">Ayuda</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>Empresa</h4>
+
+<a href="#">Sobre nosotros</a>
+<a href="#">Contacto</a>
+<a href="#">Privacidad</a>
+<a href="#">Términos</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>© 2026 CreaTuWeb. Todos los derechos reservados.</span>
+
+<span>Creá. Personaliza. Publica. 🚀</span>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<div class="close" onclick="closeModal()">×</div>
+
+<h2 id="modalTitle">Crear mi página web</h2>
+
+<p id="modalText">
+Cuéntanos qué tipo de página quieres crear y comenzaremos con una plantilla.
+</p>
+
+
+<form onsubmit="submitForm(event)">
+
+<div class="form-group">
+
+<label>Tu nombre</label>
+
+<input
+type="text"
+id="name"
+placeholder="Ej. Carlos"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Tipo de página</label>
+
+<select id="pageType">
+
+<option>Negocio</option>
+<option>Restaurante</option>
+<option>Fitness</option>
+<option>Belleza</option>
+<option>Tienda online</option>
+<option>Portafolio</option>
+<option>Página personal</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Nombre de tu proyecto</label>
+
+<input
+type="text"
+id="project"
+placeholder="Ej. Mi Negocio"
+required
+>
+
+</div>
+
+
+<button class="btn btn-green" style="width:100%;margin-top:5px;">
+    Comenzar →
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* MENU */
+
+function toggleMenu(){
+
+    alert("En la siguiente versión podemos convertir este botón en un menú móvil completo.");
+
+}
+
+
+/* MODAL */
+
+function openModal(type){
+
+    const modal = document.getElementById("modal");
+    const title = document.getElementById("modalTitle");
+    const text = document.getElementById("modalText");
+
+    if(type === "login"){
+
+        title.textContent = "Iniciar sesión";
+
+        text.textContent =
+        "La función de cuentas estará disponible cuando conectemos el backend.";
+
+    }else{
+
+        title.textContent = "Crear mi página web";
+
+        text.textContent =
+        "Cuéntanos qué tipo de página quieres crear y comenzaremos con una plantilla.";
+
+    }
+
+    modal.classList.add("active");
+
+}
+
+
+function closeModal(){
+
+    document.getElementById("modal").classList.remove("active");
+
+}
+
+
+document.getElementById("modal").addEventListener("click",function(e){
+
+    if(e.target === this){
+
+        closeModal();
+
+    }
+
+});
+
+
+/* FORM */
+
+function submitForm(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const project = document.getElementById("project").value;
+    const type = document.getElementById("pageType").value;
+
+    alert(
+        "¡Perfecto, " + name + "!\n\n" +
+        "Proyecto: " + project + "\n" +
+        "Tipo: " + type + "\n\n" +
+        "El siguiente paso será construir tu página."
+    );
+
+    closeModal();
+
+}
+
+
+/* PLANTILLAS */
+
+function selectTemplate(template){
+
+    document.getElementById("pageType").value =
+        template.includes("Gym") ? "Fitness" :
+        template.includes("Restaurante") ? "Restaurante" :
+        template.includes("Beauty") ? "Belleza" :
+        template.includes("Tienda") ? "Tienda online" :
+        "Negocio";
+
+    openModal("create");
+
+}
+
+
+/* FILTROS */
+
+function filterTemplates(category, button){
+
+    document.querySelectorAll(".filter").forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    document.querySelectorAll(".template").forEach(card=>{
+
+        if(category === "all" || card.dataset.category === category){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* FAQ */
+
+function toggleFaq(question){
+
+    const item = question.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(other=>{
+
+        if(other !== item){
+
+            other.classList.remove("open");
+
+        }
+
+    });
+
+    item.classList.toggle("open");
+
+}
+
+</script>
+
+</body>
+</html>
